@@ -17,6 +17,10 @@
            fetch=".."
            revision="opt-cm-19.1" />
 
+    <remote  name="slaff"
+           fetch=".."
+           revision="opt-cm-19.1" />
+
   <remote  name="lineage-mainline"
            fetch=".."
            remote="github"
