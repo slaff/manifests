@@ -744,6 +744,7 @@
   <project path="frameworks/libs/net" name="platform/frameworks/libs/net" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/libs/service_entitlement" name="platform/frameworks/libs/service_entitlement" groups="pdk" remote="aosp" />
   <project path="frameworks/libs/systemui" name="LineageOS/android_frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs" />
+  <!-- <project path="frameworks/libs/systemui" name="crdroidandroid/android_frameworks_libs_systemui" remote="crdroid" revision="13.0"/> -->
   <project path="frameworks/minikin" name="platform/frameworks/minikin" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/native" name="LineageOS/android_frameworks_native" groups="pdk" />
@@ -773,8 +774,8 @@
   <project path="hardware/google/av" name="platform/hardware/google/av" groups="pdk" remote="aosp" />
   <project path="hardware/google/camera" name="platform/hardware/google/camera" groups="pdk" remote="aosp" />
   <project path="hardware/google/easel" name="platform/hardware/google/easel" groups="pdk,easel" remote="aosp" />
-  <project path="hardware/google/gchips" name="LineageOS/android_hardware_google_gchips" groups="pdk-lassen,pdk-gs-arm" />
-  <project path="hardware/google/graphics/common" name="LineageOS/android_hardware_google_graphics_common" groups="pdk-lassen,pdk-gs-arm" />
+  <project path="hardware/google/gchips" name="platform/hardware/google/gchips" groups="pdk-lassen" remote="aosp" />
+  <project path="hardware/google/graphics/common" name="platform/hardware/google/graphics/common" groups="pdk-lassen" remote="aosp" />
   <project path="hardware/google/graphics/gs101" name="platform/hardware/google/graphics/gs101" groups="pdk-lassen,pdk-gs-arm" remote="aosp" />
   <project path="hardware/google/graphics/gs201" name="platform/hardware/google/graphics/gs201" groups="cloudripper" remote="aosp" />
   <project path="hardware/google/interfaces" name="platform/hardware/google/interfaces" groups="pdk" remote="aosp" />
@@ -792,10 +793,10 @@
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom,pdk-qcom" remote="aosp" />
   <project path="hardware/qcom/camera" name="LineageOS/android_hardware_qcom_camera" groups="qcom,qcom_camera,pdk-qcom" />
   <project path="hardware/qcom/data/ipacfg-mgr" name="LineageOS/android_hardware_qcom_data_ipacfg-mgr" groups="qcom,pdk-qcom" />
-  <project path="hardware/qcom/display" name="LineageOS/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" />
-  <project path="hardware/qcom/gps" name="LineageOS/android_hardware_qcom_gps" groups="qcom,qcom_gps,pdk-qcom" />
+  <project path="hardware/qcom/display" name="platform/hardware/qcom/display" groups="pdk-qcom,qcom,qcom_display" remote="aosp" />
+  <project path="hardware/qcom/gps" name="platform/hardware/qcom/gps" groups="qcom,qcom_gps,pdk-qcom" remote="aosp" />
   <project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" groups="qcom,qcom_keymaster,pdk-qcom" remote="aosp" />
-  <project path="hardware/qcom/media" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk-qcom" />
+  <project path="hardware/qcom/media" name="platform/hardware/qcom/media" groups="qcom,pdk-qcom" remote="aosp" />
   <project path="hardware/qcom/sdm845/bt" name="platform/hardware/qcom/sdm845/bt" groups="generic_fs,qcom,qcom_sdm845" remote="aosp" />
   <project path="hardware/qcom/sdm845/data/ipacfg-mgr" name="platform/hardware/qcom/sdm845/data/ipacfg-mgr" groups="generic_fs,vendor,qcom,qcom_sdm845" remote="aosp" >
     <linkfile src="os_pickup.mk" dest="hardware/qcom/sdm845/Android.mk" />
@@ -1045,7 +1046,6 @@
   <project path="prebuilts/vndk/v32" name="platform/prebuilts/vndk/v32" groups="pdk" clone-depth="1" remote="aosp" />
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="system/apex" name="LineageOS/android_system_apex" groups="pdk" />
-  <project path="system/bpf" name="platform/system/bpf" groups="pdk" remote="aosp" />
   <project path="system/bpfprogs" name="platform/system/bpfprogs" groups="pdk" remote="aosp" />
   <project path="system/ca-certificates" name="platform/system/ca-certificates" groups="pdk" remote="aosp" />
   <project path="system/chre" name="platform/system/chre" groups="pdk" remote="aosp" />
@@ -1080,7 +1080,6 @@
   <project path="system/memory/libmemtrack" name="platform/system/memory/libmemtrack" groups="pdk" remote="aosp" />
   <project path="system/memory/libmemunreachable" name="platform/system/memory/libmemunreachable" groups="pdk" remote="aosp" />
   <project path="system/memory/lmkd" name="LineageOS/android_system_memory_lmkd" groups="pdk" />
-  <project path="system/netd" name="platform/system/netd" groups="pdk" remote="aosp" />
   <project path="system/nfc" name="platform/system/nfc" groups="pdk" remote="aosp" />
   <project path="system/nvram" name="platform/system/nvram" groups="pdk" remote="aosp" />
   <project path="system/security" name="LineageOS/android_system_security" groups="pdk" />
