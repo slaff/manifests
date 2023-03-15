@@ -9,14 +9,51 @@
   </project>
 
   <!-- pure lineage-->
-  <project path="device/samsung/qcom-common" name="LineageOS/android_device_samsung_qcom-common" remote="lineage-mainline-19" />  
+  <project path="device/samsung/qcom-common" name="LineageOS/android_device_samsung_qcom-common" remote="lineage-mainline" />
 	
   <!-- jf bringup-->
+  <remove-project name="platform/external/perfetto" path="external/perfetto" />
   <project path="kernel/samsung/jf" name="JDCTeam/android_kernel_samsung_jf" remote="jdc" />
   <project path="device/samsung/jflte" name="JDCTeam/android_device_samsung_jflte" remote="jdc" />
+  <project path="device/qcom/sepolicy-legacy" name="JDCTeam/android_device_qcom_sepolicy" remote="jdc" />
+  <project path="external/perfetto" name="JDCTeam/android_external_perfetto" remote="jdc" />
   
+  <!-- official lineage picked and edited for bringup-->
+  <project path="hardware/samsung" name="LineageOS/android_hardware_samsung" remote="lineage-mainline"  />
+<!--  <project path="packages/apps/CarrierConfig" name="LineageOS/android_packages_apps_CarrierConfig" remote="lineage-mainline-19" />-->
+  <remove-project name="LineageOS/android_hardware_samsung" path="hardware/samsung" />
+<!--  <remove-project name="LineageOS/android_packages_apps_CarrierConfig" path="packages/apps/CarrierConfig" />-->
+	
+  <remove-project name="LineageOS/android_lineage-sdk" path="lineage-sdk" />
+  <remove-project name="LineageOS/android_packages_modules_adb" path="packages/modules/adb" />
+  <remove-project name="platform/art"  path="art" />
+  <remove-project name="LineageOS/android_build" path="build/make" />
+  <remove-project name="LineageOS/android_bionic" path="bionic" />
+  <remove-project name="LineageOS/android_vendor_lineage" path="vendor/lineage" />
+  <remove-project name="LineageOS/android_system_core" path="system/core" />
+  <remove-project name="LineageOS/android_frameworks_av" path="frameworks/av" />
+  <remove-project name="LineageOS/android_frameworks_native" path="frameworks/native" />
+  <remove-project name="LineageOS/android_frameworks_base" path="frameworks/base" />
+  <remove-project name="LineageOS/android_frameworks_opt_telephony" path="frameworks/opt/telephony" />
+  <remove-project name="LineageOS/android_packages_apps_Settings" path="packages/apps/Settings" />
+<!--  <remove-project name="LineageOS/android_packages_apps_Nfc" path="packages/apps/Nfc" />-->
+  <remove-project name="LineageOS/android_hardware_ril" path="hardware/ril" />
+
+  <project path="lineage-sdk" name="JDCTeam/android_lineage-sdk" remote="jdc"  />
+  <project path="packages/modules/adb" name="JDCTeam/android_packages_modules_adb" remote="jdc"  />
+  <project path="frameworks/opt/telephony" name="JDCTeam/android_frameworks_opt_telephony" remote="jdc"  />
+<!--  <project path="packages/apps/CarrierConfig" name="JDCTeam/android_packages_apps_CarrierConfig" remote="jdc"  />-->
+<!--  <project path="packages/apps/Nfc" name="JDCTeam/android_packages_apps_Nfc" remote="jdc"  />-->
+  <project path="packages/apps/Settings" name="JDCTeam/android_packages_apps_Settings" remote="jdc"  />
+  <project path="frameworks/native" name="JDCTeam/android_frameworks_native" remote="jdc"  />
+  <project path="frameworks/base" name="JDCTeam/android_frameworks_base" remote="jdc"  />
+  <project path="frameworks/av" name="JDCTeam/android_frameworks_av" remote="jdc"  />
+  <project path="bionic" name="JDCTeam/android_bionic" remote="jdc"  />
+  <project path="art" name="JDCTeam/android_art" remote="jdc"  />
+  <project path="system/core" name="JDCTeam/android_system_core-new" remote="jdc" />
+  <project path="vendor/lineage" name="JDCTeam/android_vendor_lineage" remote="jdc" />
   <project path="hardware/samsung" name="JDCTeam/android_hardware_samsung" remote="jdc" />
-  <!-- <project path="hardware/ril" name="JDCTeam/android_hardware_ril" remote="jdc" /> -->
+  <project path="hardware/ril" name="JDCTeam/android_hardware_ril" remote="jdc" />
 	
   <project path="build/make" name="JDCTeam/android_build" remote="jdc" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -29,23 +66,19 @@
   </project>
 	
   <!-- lineage's manifest tracks AOSP ones-->
-  <project path="system/netd" name="JDCTeam/android_system_netd" remote="jdc"   />
-  <project path="system/bpf" name="JDCTeam/android_system_bpf" remote="jdc"  />
+<!--  <project path="system/netd" name="JDCTeam/android_system_netd" remote="jdc"   />-->
+<!--  <project path="system/bpf" name="JDCTeam/android_system_bpf" remote="jdc"  />-->
   
   <!--crdroid launcher-->
-  <!-- 
-  <project path="external/colorkt" name="crdroidandroid/android_external_colorkt" remote="crdroid" revision="12.1" />
-  <project path="external/themelib" name="crdroidandroid/android_external_themelib" remote="crdroid" revision="12.1"  />
-  <project path="packages/apps/Launcher3" name="crdroidandroid/android_packages_apps_Launcher3" remote="crdroid" revision="12.1"  />
-  --> 
+<!--  <project path="external/colorkt" name="crdroidandroid/android_external_colorkt" remote="crdroid" revision="12.1" />-->
+<!--  <project path="external/themelib" name="crdroidandroid/android_external_themelib" remote="crdroid" revision="12.1"  />-->
+<!--  <project path="packages/apps/Launcher3" name="crdroidandroid/android_packages_apps_Launcher3" remote="crdroid" revision="12.1"  />-->
   <!-- hack to upstream merge script work-->
-  <!--
-  <remove-project name="crdroidandroid/android_external_colorkt" path="external/colorkt" />
-  <remove-project name="crdroidandroid/android_external_themelib" path="external/themelib" />
-  <remove-project name="crdroidandroid/android_packages_apps_Launcher3" path="packages/apps/Launcher3" />
-  <project path="external/colorkt" name="JDCTeam/android_external_colorkt" remote="jdc" />
-  <project path="external/themelib" name="JDCTeam/android_external_themelib" remote="jdc" />
-  <project path="packages/apps/Launcher3" name="JDCTeam/android_packages_apps_Launcher3" remote="jdc"  />
-  -->
+<!--  <remove-project name="crdroidandroid/android_external_colorkt" path="external/colorkt" />-->
+<!--  <remove-project name="crdroidandroid/android_external_themelib" path="external/themelib" />-->
+<!--  <remove-project name="crdroidandroid/android_packages_apps_Launcher3" path="packages/apps/Launcher3" />-->
+<!--  <project path="external/colorkt" name="JDCTeam/android_external_colorkt" remote="jdc" />-->
+<!--  <project path="external/themelib" name="JDCTeam/android_external_themelib" remote="jdc" />-->
+<!--  <project path="packages/apps/Launcher3" name="JDCTeam/android_packages_apps_Launcher3" remote="jdc"  />-->
 
 </manifest>
