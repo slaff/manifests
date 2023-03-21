@@ -66,8 +66,10 @@
   </project>
 	
   <!-- lineage's manifest tracks AOSP ones-->
-<!--  <project path="system/netd" name="JDCTeam/android_system_netd" remote="jdc"   />-->
-<!--  <project path="system/bpf" name="JDCTeam/android_system_bpf" remote="jdc"  />-->
+  <remove-project name="platform/system/netd" path="system/netd" />
+  <remove-project name="platform/system/bpf" path="system/bpf" />
+  <project path="system/netd" name="JDCTeam/android_system_netd" remote="jdc" />
+  <project path="system/bpf" name="JDCTeam/android_system_bpf" remote="jdc" />
   
   <!--crdroid launcher-->
 <!--  <project path="external/colorkt" name="crdroidandroid/android_external_colorkt" remote="crdroid" revision="12.1" />-->
